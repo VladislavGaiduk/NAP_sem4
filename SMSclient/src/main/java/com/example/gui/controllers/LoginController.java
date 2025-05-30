@@ -76,7 +76,7 @@ public class LoginController {
         if (response.isSuccess()) {
             String department = GsonHolder.getGson().fromJson(response.getData(), Employee.class).getDepartment().getName().trim();
 
-            if (department.equals("Бухгалтерский")) {
+            if (department.equals("Бухгалтерия")) {
                 System.out.println("Вход от имени бухгалтера.");
                 Loader.loadScene((Stage) regButton.getScene().getWindow(), StagePath.MENU_ADMIN);
 
