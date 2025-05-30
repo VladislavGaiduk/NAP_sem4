@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17" prefHeight="400.0" prefWidth="600.0"
+      fx:controller="com.example.gui.controllers.DepartmentsController">
+    <!-- Таблица для отображения отделов -->
+    <TableView fx:id="departmentsTable" prefHeight="400" prefWidth="560.0" AnchorPane.leftAnchor="20.0"
+               AnchorPane.topAnchor="20.0">
+        <columns>
+            <TableColumn fx:id="idColumn" text="ID" resizable="false" prefWidth="50"/>
+            <TableColumn fx:id="nameColumn" prefWidth="200.0" text="Название"/>
+            <TableColumn fx:id="baseSalaryColumn" prefWidth="150.0" text="Базовая зарплата"/>
+        </columns>
+    </TableView>
+
+    <!-- GridPane для меток и полей ввода -->
+    <GridPane hgap="10" vgap="10" prefWidth="400.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="240.0">
+        <children>
+            <Label text="ID:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+            <TextField fx:id="idField" promptText="Автогенерируемый ID" prefWidth="200.0" editable="false"
+                       GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+            <Label text="Название:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+            <TextField fx:id="nameField" promptText="Название" prefWidth="200.0" GridPane.columnIndex="1"
+                       GridPane.rowIndex="1"/>
+            <Label text="Базовая зарплата:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+            <TextField fx:id="baseSalaryField" promptText="Базовая зарплата" prefWidth="200.0" GridPane.columnIndex="1"
+                       GridPane.rowIndex="2"/>
+        </children>
+        <padding>
+            <Insets top="10" right="10" bottom="10" left="10"/>
+        </padding>
+    </GridPane>
+
+    <!-- HBox для кнопок -->
+    <HBox spacing="10" alignment="CENTER" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="350.0">
+        <children>
+            <Button fx:id="addDepartmentButton" text="Добавить" onAction="#addDepartment"/>
+            <Button fx:id="updateDepartmentButton" text="Обновить" onAction="#updateDepartment"/>
+            <Button fx:id="deleteDepartmentButton" text="Удалить" onAction="#deleteDepartment"/>
+        </children>
+        <padding>
+            <Insets top="10" right="10" bottom="10" left="10"/>
+        </padding>
+    </HBox>
+</VBox>

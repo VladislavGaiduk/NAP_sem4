@@ -1,0 +1,161 @@
+/* Global styles */
+.root {
+    -fx-font-family: "Roboto", sans-serif;
+    -fx-font-size: 14px;
+    -fx-background-color: #1e3a5f; /* Dark blue background */
+}
+
+/* Button styles */
+.button {
+    -fx-background-color: #2196F3; /* Blue accent color */
+    -fx-text-fill: #ffffff; /* White text for high contrast */
+    -fx-font-weight: normal;
+    -fx-font-size: 13px;
+    -fx-padding: 10px 20px;
+    -fx-background-radius: 0; /* Rectangular buttons */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 5, 0, 0, 2);
+    -fx-transition: all 0.3s ease;
+    -fx-min-width: 120px;
+}
+
+.button:hover {
+    -fx-background-color: #1976D2;
+    -fx-text-fill: #ffffff;
+    -fx-cursor: hand;
+}
+
+/* Text field styles (for login/registration) */
+.text-field {
+    -fx-background-color: #f5f6f5;
+    -fx-text-fill: #1a1a1a;
+    -fx-border-color: #4a678f;
+    -fx-border-width: 1px;
+    -fx-border-radius: 3px;
+    -fx-padding: 8px 12px;
+    -fx-min-width: 200px;
+    -fx-font-size: 13px;
+}
+
+.text-field:focused {
+    -fx-border-color: #2196F3;
+    -fx-border-width: 2px;
+}
+
+/* Label styles (for menu text) */
+.label {
+    -fx-text-fill: #f5f6f5; /* Light text on dark background */
+    -fx-font-size: 14px;
+    -fx-wrap-text: true;
+    -fx-max-width: infinity;
+    -fx-padding: 5px;
+}
+
+/* Menu and MenuItem styles (for user menu, e.g., "My Payslips") */
+.menu, .menu-item {
+    -fx-background-color: #1e3a5f; /* Dark blue background */
+    -fx-text-fill: #f5f6f5; /* Light text for contrast */
+    -fx-font-size: 13px;
+    -fx-padding: 8px;
+}
+
+.menu-item:hover, .menu-item:focused {
+    -fx-background-color: #2196F3; /* Blue accent on hover/focus */
+    -fx-text-fill: #ffffff; /* White text for high contrast */
+}
+
+/* Table styles (for payout schedule/payslip) */
+.table-view {
+    -fx-background-color: #f5f6f5;
+    -fx-border-color: #4a678f;
+    -fx-pref-width: 100%;
+    -fx-table-cell-border-color: transparent;
+}
+
+.table-view .column-header {
+    -fx-background-color: #2196F3;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 13px;
+    -fx-padding: 8px;
+    -fx-wrap-text: true;
+}
+
+.table-view .table-cell {
+    -fx-text-fill: #1a1a1a;
+    -fx-alignment: center-left;
+    -fx-padding: 10px;
+    -fx-font-size: 13px;
+    -fx-wrap-text: true;
+    -fx-min-height: 40px;
+}
+
+/* ComboBox styles (for menus) */
+.combo-box {
+    -fx-background-color: #f5f6f5;
+    -fx-border-color: #4a678f;
+    -fx-border-radius: 3px;
+    -fx-min-width: 150px;
+}
+
+.combo-box .list-cell {
+    -fx-text-fill: #1a1a1a;
+    -fx-background-color: #f5f6f5;
+    -fx-padding: 8px;
+    -fx-font-size: 13px;
+}
+
+.combo-box .list-cell:hover {
+    -fx-background-color: #2196F3;
+    -fx-text-fill: #ffffff;
+}
+
+/* DatePicker styles (for calendar picker) */
+.date-picker {
+    -fx-background-color: #f5f6f5;
+    -fx-text-fill: #1a1a1a;
+}
+
+.date-picker-popup {
+    -fx-background-color: #f5f6f5; /* Light background for popup */
+    -fx-border-color: #4a678f;
+    -fx-border-width: 1px;
+}
+
+.date-picker-popup .month-year-pane {
+    -fx-background-color: #f5f6f5;
+    -fx-text-fill: #1a1a1a; /* Dark text for month/year */
+    -fx-font-size: 13px;
+    -fx-padding: 8px;
+}
+
+.date-picker-popup .spinner-label {
+    -fx-text-fill: #1a1a1a; /* Ensure month/year text is visible */
+}
+
+.date-picker-popup .calendar-cell {
+    -fx-text-fill: #1a1a1a;
+    -fx-background-color: #f5f6f5;
+}
+
+.date-picker-popup .calendar-cell:hover {
+    -fx-background-color: #2196F3;
+    -fx-text-fill: #ffffff;
+}
+
+/* VBox and AnchorPane styles */
+.vbox, .anchor-pane {
+    -fx-background-color: #1e3a5f;
+    -fx-padding: 15px;
+    -fx-spacing: 10px;
+}
+
+/* BorderPane styles */
+.border-pane {
+    -fx-background-color: #1e3a5f;
+    -fx-padding: 15px;
+}
+
+/* Separator styles */
+.separator .line {
+    -fx-border-color: #2196F3;
+    -fx-border-width: 1px;
+}

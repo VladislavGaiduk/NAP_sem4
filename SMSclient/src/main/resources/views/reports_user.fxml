@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.layout.VBox?>
+<VBox xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11"
+      fx:controller="com.example.gui.controllers.ReportsControllerUser" spacing="10" style="-fx-padding: 10;">
+    <LineChart fx:id="salaryChart" title="Динамика выплат зарплаты">
+        <xAxis>
+            <NumberAxis label="Месяц"/>
+        </xAxis>
+        <yAxis>
+            <NumberAxis label="Сумма (руб.)"/>
+        </yAxis>
+    </LineChart>
+
+</VBox>

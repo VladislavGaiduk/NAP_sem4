@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17"
+      fx:controller="com.example.gui.controllers.PayslipController" spacing="15" alignment="CENTER"
+      style="-fx-padding: 20;">
+
+    <HBox spacing="10" alignment="CENTER">
+        <Label text="Сотрудник:"/>
+        <ComboBox fx:id="employeeComboBox" promptText="Выберите сотрудника" prefWidth="200"/>
+        <Label text="Дата выплаты:"/>
+        <ComboBox fx:id="paymentDateComboBox" promptText="Укажите дату выплаты" prefWidth="150"/>
+    </HBox>
+
+    <GridPane fx:id="payslipGrid" hgap="10" vgap="5">
+        <Label text="ФИО:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <Label fx:id="fullNameText" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+        <Label text="Отдел:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <Label fx:id="departmentText" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+        <Label text="Базовая зарплата отдела:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+        <Label fx:id="baseSalaryText" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+        <Label text="Тип образования:" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+        <Label fx:id="educationTypeText" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+
+        <Label text="Коэффициент образования:" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+        <Label fx:id="coefficientText" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+
+        <Label text="Дата выплаты:" GridPane.columnIndex="0" GridPane.rowIndex="5"/>
+        <Label fx:id="paymentDateText" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+
+        <Label text="Сумма зарплаты:" GridPane.columnIndex="0" GridPane.rowIndex="6"/>
+        <Label fx:id="amountText" GridPane.columnIndex="1" GridPane.rowIndex="6"/>
+
+        <Label text="Премия:" GridPane.columnIndex="0" GridPane.rowIndex="7"/>
+        <Label fx:id="awardAmountText" GridPane.columnIndex="1" GridPane.rowIndex="7"/>
+
+        <Label text="Описание премии:" GridPane.columnIndex="0" GridPane.rowIndex="8"/>
+        <Label fx:id="awardDescriptionText" GridPane.columnIndex="1" GridPane.rowIndex="8"/>
+
+        <Label text="Налог (%):" GridPane.columnIndex="0" GridPane.rowIndex="9"/>
+        <Label fx:id="taxText" GridPane.columnIndex="1" GridPane.rowIndex="9"/>
+
+        <Label text="Больничные дни:" GridPane.columnIndex="0" GridPane.rowIndex="10"/>
+        <Label fx:id="sickDaysText" GridPane.columnIndex="1" GridPane.rowIndex="10"/>
+
+        <Label text="Расчёт зарплаты:" GridPane.columnIndex="0" GridPane.rowIndex="11"/>
+        <Label fx:id="calculationText" GridPane.columnIndex="1" GridPane.rowIndex="11"/>
+    </GridPane>
+
+    <Button fx:id="savePdfButton" text="Сохранить в PDF" onAction="#saveToPDF"/>
+</VBox>

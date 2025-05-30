@@ -1,0 +1,163 @@
+/* Светлая тема */
+
+/* Global styles */
+.root {
+    -fx-font-family: "Roboto", sans-serif;
+    -fx-font-size: 14px;
+    -fx-background-color: #f5f6f5; /* Светло-серый фон */
+}
+
+/* Button styles */
+.button {
+    -fx-background-color: #e0e0e0; /* Светло-серый фон */
+    -fx-text-fill: #1a1a1a; /* Темный текст */
+    -fx-font-weight: normal;
+    -fx-font-size: 13px;
+    -fx-padding: 10px 20px;
+    -fx-background-radius: 0; /* Прямоугольные кнопки */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 5, 0, 0, 2);
+    -fx-transition: all 0.3s ease;
+    -fx-min-width: 120px;
+}
+
+.button:hover {
+    -fx-background-color: #d0d0d0; /* Немного темнее при наведении */
+    -fx-text-fill: #1a1a1a;
+    -fx-cursor: hand;
+}
+
+/* Text field styles */
+.text-field {
+    -fx-background-color: #ffffff; /* Белый фон */
+    -fx-text-fill: #1a1a1a;
+    -fx-border-color: #bdbdbd;
+    -fx-border-width: 1px;
+    -fx-border-radius: 3px;
+    -fx-padding: 8px 12px;
+    -fx-min-width: 200px;
+    -fx-font-size: 13px;
+}
+
+.text-field:focused {
+    -fx-border-color: #2196F3; /* Синий акцент при фокусе */
+    -fx-border-width: 2px;
+}
+
+/* Label styles */
+.label {
+    -fx-text-fill: #1a1a1a; /* Темный текст */
+    -fx-font-size: 14px;
+    -fx-wrap-text: true;
+    -fx-max-width: infinity;
+    -fx-padding: 5px;
+}
+
+/* Menu and MenuItem styles */
+.menu, .menu-item {
+    -fx-background-color: #f5f6f5; /* Светлый фон */
+    -fx-text-fill: #1a1a1a; /* Темный текст */
+    -fx-font-size: 13px;
+    -fx-padding: 8px;
+}
+
+.menu-item:hover, .menu-item:focused {
+    -fx-background-color: #e0e0e0; /* Светло-серый при наведении */
+    -fx-text-fill: #1a1a1a;
+}
+
+/* Table styles */
+.table-view {
+    -fx-background-color: #ffffff; /* Белый фон */
+    -fx-border-color: #bdbdbd;
+    -fx-pref-width: 100%;
+    -fx-table-cell-border-color: transparent;
+}
+
+.table-view .column-header {
+    -fx-background-color: #e0e0e0; /* Светло-серый фон заголовков */
+    -fx-text-fill: #1a1a1a; /* Темный текст */
+    -fx-font-size: 13px;
+    -fx-padding: 8px;
+    -fx-wrap-text: true;
+}
+
+.table-view .table-cell {
+    -fx-text-fill: #1a1a1a;
+    -fx-alignment: center-left;
+    -fx-padding: 10px;
+    -fx-font-size: 13px;
+    -fx-wrap-text: true;
+    -fx-min-height: 40px;
+}
+
+/* ComboBox styles */
+.combo-box {
+    -fx-background-color: #ffffff; /* Белый фон */
+    -fx-border-color: #bdbdbd;
+    -fx-border-radius: 3px;
+    -fx-min-width: 150px;
+}
+
+.combo-box .list-cell {
+    -fx-text-fill: #1a1a1a;
+    -fx-background-color: #ffffff;
+    -fx-padding: 8px;
+    -fx-font-size: 13px;
+}
+
+.combo-box .list-cell:hover {
+    -fx-background-color: #e0e0e0;
+    -fx-text-fill: #1a1a1a;
+}
+
+/* DatePicker styles */
+.date-picker {
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #1a1a1a;
+}
+
+.date-picker-popup {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #bdbdbd;
+    -fx-border-width: 1px;
+}
+
+.date-picker-popup .month-year-pane {
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #1a1a1a;
+    -fx-font-size: 13px;
+    -fx-padding: 8px;
+}
+
+.date-picker-popup .spinner-label {
+    -fx-text-fill: #1a1a1a;
+}
+
+.date-picker-popup .calendar-cell {
+    -fx-text-fill: #1a1a1a;
+    -fx-background-color: #ffffff;
+}
+
+.date-picker-popup .calendar-cell:hover {
+    -fx-background-color: #e0e0e0;
+    -fx-text-fill: #1a1a1a;
+}
+
+/* VBox and AnchorPane styles */
+.vbox, .anchor-pane {
+    -fx-background-color: #f5f6f5;
+    -fx-padding: 15px;
+    -fx-spacing: 10px;
+}
+
+/* BorderPane styles */
+.border-pane {
+    -fx-background-color: #f5f6f5;
+    -fx-padding: 15px;
+}
+
+/* Separator styles */
+.separator .line {
+    -fx-border-color: #bdbdbd;
+    -fx-border-width: 1px;
+}

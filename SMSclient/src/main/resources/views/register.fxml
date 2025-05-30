@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<VBox xmlns:fx="http://javafx.com/fxml/1" alignment="CENTER" prefHeight="600.0" prefWidth="600.0" spacing="20"
+      xmlns="http://javafx.com/javafx/17.0.12" fx:controller="com.example.gui.controllers.RegisterController">
+    <!-- Изображение с тенью -->
+    <ImageView fitHeight="100" fitWidth="100" preserveRatio="true">
+        <image>
+            <Image url="@../images/logo.png"/>
+        </image>
+    </ImageView>
+
+    <!-- Заголовок и подзаголовок -->
+    <VBox alignment="CENTER" spacing="10">
+        <Label text="Регистрация"/>
+        <Label text="Создайте новый аккаунт для доступа к системе"/>
+    </VBox>
+
+    <!-- Поля ввода -->
+    <HBox alignment="CENTER" spacing="20">
+        <!-- Левая колонка: Логин, Пароль, Подтверждение пароля -->
+        <GridPane alignment="CENTER" hgap="10" vgap="10">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="120"/>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="200"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints vgrow="SOMETIMES"/>
+                <RowConstraints vgrow="SOMETIMES"/>
+                <RowConstraints vgrow="SOMETIMES"/>
+            </rowConstraints>
+            <Label text="Логин *" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+            <TextField fx:id="usernameField" promptText="Введите имя пользователя" GridPane.columnIndex="1"
+                       GridPane.rowIndex="0">
+                <tooltip>
+                    <Tooltip text="Введите ваше имя пользователя"/>
+                </tooltip>
+            </TextField>
+            <Label text="Пароль *" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+            <PasswordField fx:id="passwordField" promptText="Введите пароль" GridPane.columnIndex="1"
+                           GridPane.rowIndex="1">
+                <tooltip>
+                    <Tooltip text="Введите ваш пароль"/>
+                </tooltip>
+            </PasswordField>
+            <Label text="Подтверждение *" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+            <PasswordField fx:id="confirmPasswordField" promptText="Повторите пароль" GridPane.columnIndex="1"
+                           GridPane.rowIndex="2">
+                <tooltip>
+                    <Tooltip text="Повторите ваш пароль"/>
+                </tooltip>
+            </PasswordField>
+        </GridPane>
+
+        <!-- Правая колонка: Имя, Фамилия, Отчество -->
+        <GridPane alignment="CENTER" hgap="10" vgap="10">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="120"/>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="200"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints vgrow="SOMETIMES"/>
+                <RowConstraints vgrow="SOMETIMES"/>
+                <RowConstraints vgrow="SOMETIMES"/>
+            </rowConstraints>
+            <Label text="Имя *" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+            <TextField fx:id="firstNameField" promptText="Введите имя" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                <tooltip>
+                    <Tooltip text="Введите ваше имя"/>
+                </tooltip>
+            </TextField>
+            <Label text="Фамилия *" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+            <TextField fx:id="lastNameField" promptText="Введите фамилию" GridPane.columnIndex="1"
+                       GridPane.rowIndex="1">
+                <tooltip>
+                    <Tooltip text="Введите вашу фамилию"/>
+                </tooltip>
+            </TextField>
+            <Label text="Отчество" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+            <TextField fx:id="patronymicField" promptText="Введите отчество" GridPane.columnIndex="1"
+                       GridPane.rowIndex="2">
+                <tooltip>
+                    <Tooltip text="Введите ваше отчество (необязательно)"/>
+                </tooltip>
+            </TextField>
+        </GridPane>
+        <padding>
+            <Insets bottom="10" left="10" right="10" top="10"/>
+        </padding>
+    </HBox>
+
+    <!-- Разделительная линия -->
+
+
+    <!-- Кнопки с анимацией и подсказками -->
+    <HBox alignment="CENTER" spacing="10">
+        <Button fx:id="registerButton" onAction="#onRegisterButton" text="Зарегистрироваться">
+            <tooltip>
+                <Tooltip text="Создать новый аккаунт"/>
+            </tooltip>
+        </Button>
+        <Button fx:id="backToLoginButton" onAction="#onBackToLoginButton" text="Назад к авторизации">
+            <tooltip>
+                <Tooltip text="Вернуться к форме входа"/>
+            </tooltip>
+        </Button>
+    </HBox>
+</VBox>

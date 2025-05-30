@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<HBox xmlns:fx="http://javafx.com/fxml/1" prefHeight="600.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/11"
+      fx:controller="com.example.gui.controllers.UserMenuController" spacing="10"
+      style="-fx-padding: 10; -fx-alignment: center;">
+
+    <VBox alignment="TOP_CENTER" prefWidth="250" minWidth="250" spacing="10">
+        <Label text="Меню пользователя"/>
+        <Separator/>
+        <Button fx:id="viewPayslipButton" text="Мои расчетные листы" onAction="#handleViewPayslip"/>
+        <Button fx:id="viewReportsButton" text="Мой график выплат" onAction="#handleViewReports"/>
+        <Separator/>
+        <Button fx:id="logoutButton" text="Выйти" onAction="#handleLogout"/>
+        <padding>
+            <Insets bottom="10" left="10" right="10" top="10"/>
+        </padding>
+    </VBox>
+    <VBox fx:id="dynamicContent" HBox.hgrow="ALWAYS"/>
+</HBox>
+
+

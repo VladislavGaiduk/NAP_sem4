@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17" prefHeight="680.0" prefWidth="980.0"
+      fx:controller="com.example.gui.controllers.EmployeesController">
+
+    <!-- Элементы поиска -->
+    <HBox spacing="10" alignment="CENTER">
+        <TextField fx:id="searchFirstNameField" promptText="Имя" prefWidth="150"/>
+        <TextField fx:id="searchLastNameField" promptText="Фамилия" prefWidth="150"/>
+        <TextField fx:id="searchDepartmentField" promptText="Отдел" prefWidth="150"/>
+        <Button fx:id="searchButton" text="Поиск" onAction="#searchEmployees"/>
+        <Button fx:id="resetFilterButton" text="Сбросить поиск" onAction="#resetSearch"/>
+    </HBox>
+
+    <!-- Таблица для отображения работников -->
+    <TableView fx:id="employeesTable" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="idColumn" text="ID" resizable="false" prefWidth="40"/>
+            <TableColumn fx:id="firstNameColumn" text="Имя"/>
+            <TableColumn fx:id="lastNameColumn" text="Фамилия"/>
+            <TableColumn fx:id="patronymicColumn" text="Отчество"/>
+            <TableColumn fx:id="loginColumn" text="Логин"/>
+            <TableColumn fx:id="hireDateColumn" text="Дата найма"/>
+            <TableColumn fx:id="departmentColumn" text="Отдел"/>
+            <TableColumn fx:id="educationTypeColumn" text="Тип образования"/>
+        </columns>
+
+
+    </TableView>
+
+    <!-- GridPane для меток и полей ввода -->
+    <GridPane hgap="20" vgap="10" prefWidth="600.0" alignment="CENTER">
+
+        <Label text="Имя" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <Label text="Фамилия" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <Label text="Отчество" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+        <Label text="Пароль" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+
+        <TextField fx:id="firstNameField" promptText="Имя" prefWidth="200.0" GridPane.columnIndex="1"
+                   GridPane.rowIndex="0"/>
+        <TextField fx:id="lastNameField" promptText="Фамилия" prefWidth="200.0" GridPane.columnIndex="1"
+                   GridPane.rowIndex="1"/>
+        <TextField fx:id="patronymicField" promptText="Отчество" prefWidth="200.0" GridPane.columnIndex="1"
+                   GridPane.rowIndex="2"/>
+        <TextField fx:id="passwordField" promptText="Пароль" prefWidth="200.0" GridPane.columnIndex="1"
+                   GridPane.rowIndex="3"/>
+
+        <Label text="Логин" GridPane.columnIndex="2" GridPane.rowIndex="0"/>
+        <Label text="Тип образования" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+        <Label text="Отдел" GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+        <Label text="Дата найма" GridPane.columnIndex="2" GridPane.rowIndex="3"/>
+
+        <TextField fx:id="loginField" promptText="Логин" prefWidth="200.0" GridPane.columnIndex="3"
+                   GridPane.rowIndex="0"/>
+        <DatePicker fx:id="hireDatePicker" promptText="Дата найма" prefWidth="200.0" GridPane.columnIndex="3"
+                    GridPane.rowIndex="3"/>
+        <ComboBox fx:id="departmentComboBox" promptText="Отдел" prefWidth="200.0" GridPane.columnIndex="3"
+                  GridPane.rowIndex="2"/>
+        <ComboBox fx:id="educationTypeComboBox" promptText="Тип образования" prefWidth="200.0" GridPane.columnIndex="3"
+                  GridPane.rowIndex="1"/>
+
+        <padding>
+            <Insets top="10" right="20" bottom="10" left="20"/>
+        </padding>
+    </GridPane>
+
+    <!-- HBox для кнопок -->
+    <HBox spacing="10" alignment="CENTER">
+        <children>
+            <Button fx:id="addButton" text="Добавить" onAction="#addEmployee"/>
+            <Button fx:id="updateButton" text="Обновить" onAction="#updateEmployee"/>
+            <Button fx:id="deleteButton" text="Удалить" onAction="#deleteEmployee"/>
+        </children>
+        <padding>
+            <Insets top="10" right="10" bottom="10" left="10"/>
+        </padding>
+    </HBox>
+</VBox>

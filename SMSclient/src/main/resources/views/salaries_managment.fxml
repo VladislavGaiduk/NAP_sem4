@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17" prefHeight="550.0" prefWidth="600.0"
+      fx:controller="com.example.gui.controllers.SalaryController">
+
+    <!-- Элементы фильтрации -->
+    <HBox spacing="10" alignment="CENTER">
+        <ComboBox fx:id="filterEmployeeComboBox" promptText="Выберите сотрудника" prefWidth="200"/>
+        <DatePicker fx:id="filterPaymentDatePicker" promptText="Выберите дату выплаты" prefWidth="150"/>
+        <Button fx:id="filterButton" text="Фильтровать" onAction="#filterSalaries"/>
+        <Button fx:id="resetFilterButton" text="Сбросить фильтр" onAction="#resetFilter"/>
+    </HBox>
+
+    <!-- Таблица для отображения зарплат -->
+    <TableView fx:id="salariesTable" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="idColumn" text="ID" resizable="false" prefWidth="50"/>
+            <TableColumn fx:id="employeeColumn" text="Работник"/>
+            <TableColumn fx:id="amountColumn" text="Сумма"/>
+            <TableColumn fx:id="paymentDateColumn" text="Дата выплаты"/>
+            <TableColumn fx:id="awardAmountColumn" text="Премия"/>
+            <TableColumn fx:id="awardDescriptionColumn" text="Описание премии"/>
+            <TableColumn fx:id="taxColumn" text="Налог"/>
+        </columns>
+    </TableView>
+
+    <!-- GridPane для меток и полей ввода -->
+    <GridPane hgap="10" vgap="10" prefWidth="400.0" alignment="CENTER">
+        <children>
+            <Label text="Работник:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+            <ComboBox fx:id="employeeComboBox" promptText="Работник" prefWidth="200.0" GridPane.columnIndex="1"
+                      GridPane.rowIndex="0"/>
+            <Label text="Сумма:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+            <TextField fx:id="amountField" prefWidth="200.0" promptText="Зарплата (выч. автом.)"
+                       GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+            <Label text="Дата выплаты:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+            <DatePicker fx:id="paymentDatePicker" promptText="Дата выплаты" prefWidth="200.0" GridPane.columnIndex="1"
+                        GridPane.rowIndex="2"/>
+            <Label text="Премия:" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+            <TextField fx:id="awardAmountField" prefWidth="200.0" promptText="Премия" GridPane.columnIndex="1"
+                       GridPane.rowIndex="3"/>
+            <Label text="Описание премии:" GridPane.columnIndex="2" GridPane.rowIndex="0"/>
+            <TextField fx:id="awardDescriptionField" prefWidth="200.0" promptText="Описание премии"
+                       GridPane.columnIndex="3" GridPane.rowIndex="0"/>
+            <Label text="Налог:" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+            <TextField fx:id="taxField" promptText="Налог (в процентах)" prefWidth="200.0" GridPane.columnIndex="3"
+                       GridPane.rowIndex="1"/>
+            <Label text="Начало больничного:" GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+            <DatePicker fx:id="sickLeaveStartPicker" promptText="Начало больничного" GridPane.columnIndex="3"
+                        GridPane.rowIndex="2"/>
+            <Label text="Конец больничного:" GridPane.columnIndex="2" GridPane.rowIndex="3"/>
+            <DatePicker fx:id="sickLeaveEndPicker" promptText="Конец больничного" GridPane.columnIndex="3"
+                        GridPane.rowIndex="3"/>
+        </children>
+        <padding>
+            <Insets top="10" right="10" bottom="10" left="10"/>
+        </padding>
+    </GridPane>
+
+    <!-- HBox для кнопок -->
+    <HBox spacing="10" alignment="CENTER">
+        <children>
+            <Button fx:id="addButton" text="Добавить" onAction="#addSalary"/>
+            <Button fx:id="updateButton" text="Обновить" onAction="#updateSalary"/>
+            <Button fx:id="deleteButton" text="Удалить" onAction="#deleteSalary"/>
+        </children>
+        <padding>
+            <Insets top="10" right="10" bottom="10" left="10"/>
+        </padding>
+    </HBox>
+</VBox>
